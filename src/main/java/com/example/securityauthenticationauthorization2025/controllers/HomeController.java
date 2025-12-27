@@ -25,4 +25,9 @@ public class HomeController {
     public String authenticated() {
         return "authenticated";
     }
+
+    @GetMapping("/403")
+    public String accessDenied() {
+        return "403";
+    }
 }
