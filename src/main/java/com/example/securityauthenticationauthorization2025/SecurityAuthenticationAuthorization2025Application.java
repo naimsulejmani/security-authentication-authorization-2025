@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SecurityAuthenticationAuthorization2025Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SecurityAuthenticationAuthorization2025Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SecurityAuthenticationAuthorization2025Application.class, args);
+    }
 
 }

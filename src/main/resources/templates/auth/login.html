@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+
+<form th:action="@{/login}" th:object="${user}" method="post">
+    <input type="text" th:field="*{username}" placeholder="Username">
+    <input type="password" th:field="*{password}" placeholder="Password">
+    <button type="submit">Login</button>
+    <a href="/register">Go to register</a>
+</form>
+
 </body>
 </html>
