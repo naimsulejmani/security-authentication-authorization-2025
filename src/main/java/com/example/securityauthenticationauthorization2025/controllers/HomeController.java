@@ -20,4 +20,9 @@ public class HomeController {
     public String admin() {
         return "admin";
     }
+
+    @GetMapping("/authenticated")
+    public String authenticated() {
+        return "authenticated";
+    }
 }

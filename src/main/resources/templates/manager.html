@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <p>This page can be shown to manager and admin</p>
+
+<a href="/">Home</a>
+<a href="/admin" sec:authorize="hasRole('ADMIN')">Admin</a>
+
+<a href="/authenticated" sec:authorize="isAuthenticated()">Authenticated</a>
+
+<form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+    <button type="submit">Logout</button>
+</form>
+</body>
 </body>
 </html>

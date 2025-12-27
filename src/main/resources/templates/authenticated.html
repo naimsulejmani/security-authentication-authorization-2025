@@ -5,20 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<p>Welcome to home page! It's shown by all!</p>
+<p>This page can be shown to all authenticated users</p>
 
-<th:block sec:authorize="!isAuthenticated()">
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
-</th:block>
 
+<a href="/">Home</a>
 <a href="/manager" sec:authorize="hasAnyRole('MANAGER','ADMIN')">Manager</a>
 <a href="/admin" sec:authorize="hasRole('ADMIN')">Admin</a>
-
-<a href="/authenticated" sec:authorize="isAuthenticated()">Authenticated</a>
 
 <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
     <button type="submit">Logout</button>
 </form>
+</body>
 </body>
 </html>
